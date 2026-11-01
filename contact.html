@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact met Studio Lief | Let’s Talk</title>
+  <meta name="description" content="Een vraag, ideeën bespreken of kennismaken? Neem contact op met Madelief Visser van Studio Lief over branding, drukwerk en social media design.">
+  <link rel="icon" href="/favicon.ico?v=4" sizes="any">
+  <link rel="icon" type="image/png" sizes="64x64" href="/images/favicon.png?v=4">
+  <link rel="shortcut icon" href="/favicon.ico?v=4">
+  <link rel="apple-touch-icon" href="/images/favicon.png?v=4">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.typekit.net/piu7oez.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://studio-lief.com/contact.html">
+  <meta property="og:locale" content="nl_NL">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Studio Lief | Branding &amp; Design">
+  <meta property="og:title" content="Contact met Studio Lief | Let’s Talk">
+  <meta property="og:description" content="Een vraag, ideeën bespreken of kennismaken? Neem contact op met Madelief Visser van Studio Lief over branding, drukwerk en social media design.">
+  <meta property="og:url" content="https://studio-lief.com/contact.html">
+</head>
+<body>
+
+  <!-- ================================================================
+       HEADER & NAVIGATION (NO Contact in main nav!)
+       ================================================================ -->
+  <header class="site-header" id="site-header">
+    <div class="container nav-layout">
+      <nav class="nav-left-links" aria-label="Hoofdnavigatie">
+        <a href="index.html">Home</a>
+        <a href="over.html">Over</a>
+        <a href="services.html">Services</a>
+        <a href="portfolio.html">Portfolio</a>
+      </nav>
+
+      <a href="index.html" class="nav-center-logo" aria-label="Studio Lief Homepage">
+        <img alt="Studio Lief Branding &amp; Design" src="images/web/logo1-1957.webp" width="1957" height="485" loading="eager" decoding="async">
+      </a>
+
+      <div class="nav-right-cta">
+        <a href="contact.html" class="btn-lets-talk" style="background-color: var(--color-dark-navy); color: var(--color-white);">LET'S TALK</a>
+      </div>
+
+      <button class="mobile-toggle" aria-label="Menu openen" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer-overlay"></div>
+  <aside class="mobile-drawer" aria-label="Mobiel navigatiemenu">
+    <div>
+      <div style="margin-bottom: 2.5rem;">
+        <img alt="Studio Lief" style="height: 38px;" src="images/web/logo1-1957.webp" width="1957" height="485" loading="eager" decoding="async">
+      </div>
+      <nav class="mobile-nav-links">
+        <a href="index.html">Home</a>
+        <a href="over.html">Over</a>
+        <a href="services.html">Services</a>
+        <a href="portfolio.html">Portfolio</a>
+      </nav>
+    </div>
+    <div>
+      <a href="contact.html" class="btn-lets-talk" style="width: 100%; text-align: center; display: block; padding: 0.85rem 0;">LET'S TALK</a>
+    </div>
+  </aside>
+
+  <main class="contact-page">
+  <!-- ================================================================
+       CONTACT HERO
+       ================================================================ -->
+  <section class="internal-hero">
+    <div class="container">
+      <h1 class="internal-hero-title">LET'S TALK</h1>
+      <p class="internal-hero-subtitle">
+        Heb je een vraag, wil je sparren over jouw ideeen of gewoon even kennismaken? Neem gerust contact met mij op!
+      </p>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       SIMPLIFIED CONTACT FORM (Only: Naam, E-mail, Bericht)
+       ================================================================ -->
+  <section class="contact-page-form-section">
+    <div class="container">
+      <div class="contact-simple-wrap">
+        <form class="contact-simple-form" id="contact-form" action="api/contact.php" method="post">
+          <div hidden aria-hidden="true"><label for="contact-website">Website</label><input id="contact-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+          <div class="form-field">
+            <label for="naam">Naam *</label>
+            <input type="text" id="naam" name="naam" placeholder="Jouw naam" required>
+          </div>
+
+          <div class="form-field">
+            <label for="email">E-mail *</label>
+            <input type="email" id="email" name="email" placeholder="jouw@email.com" required>
+          </div>
+
+          <div class="form-field">
+            <label for="telefoonnummer">Telefoonnummer *</label>
+            <input type="tel" id="telefoonnummer" name="telefoonnummer" placeholder="Jouw telefoonnummer" required>
+          </div>
+
+          <div class="form-field">
+            <label for="bericht">Bericht *</label>
+            <textarea id="bericht" name="bericht" placeholder="Waar kan Studio Lief je bij helpen?" required></textarea>
+          </div>
+
+          <button type="submit" class="btn-submit-contact">VERSTUUR BERICHT</button>
+        </form>
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <!-- ================================================================
+       FOOTER & BOTTOM LEGAL STRIP
+       ================================================================ -->
+  <footer class="site-footer-ref">
+    <div class="container">
+      <div class="footer-ref-main">
+        <div class="footer-ref-brand">
+          <a href="index.html" class="footer-ref-logo">
+            <img alt="Studio Lief Branding &amp; Design" src="images/web/logo2-1242.webp" width="1242" height="593" loading="lazy" decoding="async">
+          </a>
+        </div>
+        <div>
+          <h4 class="footer-ref-col-title">MENU</h4>
+          <div class="footer-ref-links">
+            <a href="over.html">Over</a>
+            <a href="services.html">Services</a>
+            <a href="portfolio.html">Portfolio</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer-ref-col-title">SOCIALS</h4>
+          <div class="footer-ref-links">
+            <a href="https://www.instagram.com/designstudio_lief/" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://www.linkedin.com/in/madelief-visser-a103062aa/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://www.tiktok.com/@designstudio_lief?_t=8pnt6Hiipfd&_r=1" target="_blank" rel="noopener">TikTok</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer-ref-col-title">CONTACT</h4>
+          <div class="footer-ref-links">
+            <a href="contact.html">Contact formulier</a>
+            <a href="tel:+31644371497">+31 6 44 37 14 97</a>
+            <a href="mailto:info@studio-lief.com">info@studio-lief.com</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-ref-bottom-strip">
+      <div class="container">
+        &copy; 2026 Studio Lief | Branding &amp; Design | Privacybeleid | Algemene voorwaarden |
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
