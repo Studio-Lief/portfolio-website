@@ -1,0 +1,257 @@
+/* Homepage-only reference corrections. Loaded only by index.html. */
+@font-face {
+  font-family: "Cormorant Custom";
+  src: url("./Cormorant-SemiBoldItalic.ttf") format("truetype");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+:root {
+  --font-serif-italic: "ivypresto-headline", serif;
+  --bg-cream-header: #dac8b6;
+  --hero-headline-size: clamp(2.8rem, 6vw, 4.8rem);
+}
+
+.nav-left-links a,
+.mobile-nav-links a,
+.hero-title-top,
+.hero-title-in-de,
+.about-ref-bubble p,
+.cases-ref-link,
+.service-ref-num,
+.clients-ref-title,
+.cta-ref-action {
+  font-family: var(--font-serif-italic);
+  font-weight: 400;
+  font-style: italic;
+  font-synthesis: none;
+}
+
+.hero-title-top,
+.hero-title-in-de,
+.hero-title-spotlights {
+  font-size: var(--hero-headline-size);
+}
+
+.hero-ref-bg img { filter: none; }
+.hero-ref-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 28, 51, 0.55);
+  pointer-events: none;
+}
+
+/* Homepage portfolio CTA: transparent by default, white fill with navy text on hover. */
+.btn-hero-portfolio {
+  background-color: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  color: var(--color-white);
+  box-shadow: none;
+  transition:
+    background-color 0.3s ease-in-out,
+    color 0.3s ease-in-out,
+    border-color 0.3s ease-in-out;
+}
+
+.btn-hero-portfolio:hover {
+  background-color: var(--color-white);
+  border-color: var(--color-white);
+  color: var(--color-dark-navy);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  box-shadow: none;
+}
+
+.ticker-track { animation-duration: 90s; }
+.ticker-item {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.about-ref-watermark {
+  left: 68%;
+  height: auto;
+  max-width: none;
+  opacity: 1;
+  animation: none;
+  transition: none;
+  transform: translate(-50%, -50%);
+}
+
+.about-ref-bubble {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
+}
+
+.cases-ref-link { text-transform: uppercase; }
+
+.services-ref-section { padding: clamp(6rem, 9vw, 9rem) 0; }
+.service-ref-item { padding-top: clamp(1.1rem, 1.65vw, 1.65rem); padding-bottom: clamp(1.1rem, 1.65vw, 1.65rem); }
+.service-ref-title { line-height: 1.2; }
+
+.client-logo-item { opacity: 1; }
+.client-logo-item img {
+  width: auto;
+  height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+@media screen and (max-width: 768px) {
+  :root { --hero-headline-size: 2.5rem; }
+}
+
+/* Anton has taller capitals; optically match the Cormorant letter height. */
+.hero-title-spotlights {
+  font-size: calc(var(--hero-headline-size) * 0.8);
+  font-weight: 400;
+}
+
+
+/* Crop the reference composition; the decoration never determines section height. */
+.about-ref-section {
+  padding-top: clamp(2rem, 4vw, 4rem);
+  overflow: hidden;
+}
+.about-ref-grid { align-items: center; }
+.about-ref-photo-wrap { align-self: end; }
+.about-ref-photo {
+  width: auto;
+  max-width: 100%;
+  height: clamp(360px, 50vw, 680px);
+  object-fit: contain;
+  object-position: center bottom;
+}
+.about-ref-watermark {
+  top: 46%;
+  left: 73%;
+  width: clamp(580px, 72vw, 1040px);
+  height: auto;
+}
+.about-ref-text-wrap {
+  justify-self: center;
+  width: min(100%, 25rem);
+  padding-bottom: 0;
+  text-align: left;
+}
+.about-ref-heading {
+  font-size: clamp(1.8rem, 2.7vw, 2.5rem);
+  margin-bottom: 1rem;
+}
+.about-ref-bubble p { line-height: 1.25; }
+
+/* Each row is one moving track. Card widths do not depend on the card count. */
+.marquee {
+  --marquee-gap: clamp(1.5rem, 3vw, 2.5rem);
+  --marquee-card-width: clamp(260px, 25vw, 360px);
+  display: block;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  overflow: hidden;
+}
+.marquee-track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+}
+.marquee-sequence {
+  display: flex;
+  flex: 0 0 auto;
+  gap: var(--marquee-gap);
+  padding-right: var(--marquee-gap);
+}
+.marquee .case-card-ref {
+  flex: 0 0 auto;
+  width: var(--marquee-card-width);
+}
+.marquee .case-card-2 { width: calc(var(--marquee-card-width) * 1.45); }
+.marquee.cases-row-2 { --marquee-card-width: clamp(300px, 37.5vw, 550px); }
+.marquee .case-card-4 { width: calc(var(--marquee-card-width) * 1.35); }
+.marquee .case-card-ref img,
+.marquee .case-card-ref:hover img {
+  transform: none;
+  transition: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .about-ref-grid { gap: 1.5rem; }
+  .about-ref-text-wrap { text-align: center; }
+  .about-ref-watermark { top: 62%; left: 68%; }
+
+  /* Keep the case heading and its destination together at phone widths. */
+  .cases-ref-header {
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 0.6rem;
+  }
+  .cases-ref-title {
+    font-size: clamp(1.05rem, 4.1vw, 2.6rem);
+    white-space: nowrap;
+    flex: 0 1 auto;
+  }
+  .cases-ref-link {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    font-size: clamp(0.65rem, 2.2vw, 1.15rem);
+    letter-spacing: 0.06em;
+    gap: 0.25rem;
+  }
+
+  /* Reserve hover travel instead of changing the row's available width. */
+  .service-ref-item {
+    gap: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  .service-ref-item:hover { padding-left: 0; }
+  .service-ref-left {
+    min-width: 0;
+    gap: clamp(0.4rem, 1.3vw, 0.9rem);
+    transition: transform var(--transition-smooth);
+  }
+  .service-ref-item:hover .service-ref-left { transform: translateX(4px); }
+  .service-ref-num {
+    flex-shrink: 0;
+    font-size: clamp(1.15rem, 3vw, 2rem);
+  }
+  .service-ref-title {
+    white-space: nowrap;
+    font-size: clamp(0.95rem, 3.55vw, 2.15rem);
+    letter-spacing: 0.025em;
+  }
+  .service-ref-arrow {
+    flex-shrink: 0;
+    font-size: clamp(1.15rem, 3vw, 2rem);
+  }
+
+  .cta-ref-text { order: 0; min-width: 0; text-align: center; }
+  .cta-ref-image { order: 1; }
+  .cta-ref-text h2 { font-size: clamp(2.1rem, 7.8vw, 4.8rem); }
+  .cta-ref-action {
+    font-size: clamp(1.65rem, 5.4vw, 3.15rem);
+    display: inline-flex;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    gap: clamp(0.75rem, 3vw, 2rem);
+    justify-content: center;
+  }
+  .cta-ref-action span:last-child { font-size: 1.1em; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee { overflow-x: auto; }
+  .marquee-track { will-change: auto; }
+}
+
+
+/* Fit the complete neon strip below the hero without changing header or type. */
+@media screen and (min-width: 1025px) {
+  .hero-ref-section {
+    min-height: min(85vh, calc(100svh - var(--home-header-height, 85px) - var(--home-ticker-height, 60px)));
+  }
+}

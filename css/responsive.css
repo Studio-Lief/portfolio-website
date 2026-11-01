@@ -1,0 +1,250 @@
+/* ====================================================================
+   STUDIO LIEF - RESPONSIVE STYLESHEET
+   Mobile, Tablet & Breakpoint Adaptations
+   ==================================================================== */
+
+/* --- Tablet Breakpoint (<= 1024px) --- */
+@media screen and (max-width: 1024px) {
+  :root {
+    --container-pad: clamp(2rem, 4vw, 3rem);
+  }
+
+  /* Keep the drawer logo's intrinsic proportions despite inline height markup. */
+  .mobile-drawer img {
+    width: min(100%, 220px);
+    height: auto !important;
+    object-fit: contain;
+  }
+
+  .mobile-drawer { height: 100dvh; overflow-y: auto; }
+
+  .over-closing-cta__grid > div {
+    min-width: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .over-closing-cta h2 { text-align: center; }
+
+  .project-next-section__inner {
+    flex-direction: row;
+    align-items: center;
+    gap: clamp(0.5rem, 2vw, 1.5rem);
+  }
+
+  .project-next-link {
+    min-height: 44px;
+    min-width: 0;
+    gap: clamp(0.35rem, 1.2vw, 0.8rem);
+    font-size: clamp(0.52rem, 1.65vw, 0.75rem);
+    white-space: nowrap;
+  }
+
+  .project-next-link--next { margin-left: auto; }
+  .portfolio-showcase__title { overflow-wrap: anywhere; }
+  .footer-ref-main > *, .form-field { min-width: 0; }
+
+  .clients-ref-row { flex-wrap: nowrap; }
+  .clients-ref-row .client-logo-item { min-width: 0; }
+
+  /* Header Layout */
+  .nav-left-links,
+  .nav-right-cta {
+    display: none;
+  }
+
+  .mobile-toggle {
+    display: flex;
+  }
+
+  .nav-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-center-logo {
+    flex: none;
+  }
+
+  /* About Intro Section */
+  .about-ref-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  .about-ref-photo-wrap {
+    order: 2;
+  }
+
+  .about-ref-text-wrap {
+    order: 1;
+    padding-bottom: 0;
+    text-align: center;
+  }
+
+  .about-ref-watermark {
+    width: 500px;
+    height: 500px;
+  }
+
+  /* Portfolio Cases Collage */
+  .cases-row-1,
+  .cases-row-2 {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .cases-row-1 .case-card-ref,
+  .cases-row-2 .case-card-ref {
+    height: clamp(260px, 45vw, 400px);
+  }
+
+  /* CTA Section */
+  .cta-ref-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: center;
+  }
+
+  .cta-ref-action {
+    justify-content: center;
+  }
+
+  /* Footer */
+  .footer-ref-main {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+  }
+
+  .footer-ref-brand {
+    grid-column: span 2;
+  }
+
+  /* Internal Pages */
+  .service-editorial-grid,
+  .service-editorial-grid.reverse {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .service-editorial-grid.reverse .service-editorial-image {
+    order: 0;
+  }
+
+  .portfolio-graphink-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .case-about-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .case-study-meta-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+/* --- Mobile Breakpoint (<= 768px) --- */
+@media screen and (max-width: 768px) {
+  :root {
+    --container-pad: clamp(1.25rem, 5.6vw, 2rem);
+    --radius-card: 20px;
+  }
+
+  .site-header {
+    padding: 1rem 0;
+  }
+
+  .nav-center-logo img {
+    height: 36px;
+  }
+
+  .hero-title-top {
+    font-size: 2.5rem;
+  }
+
+  .hero-title-in-de {
+    font-size: 2.2rem;
+  }
+
+  .hero-title-spotlights {
+    font-size: 3.2rem;
+  }
+
+  .about-ref-bubble {
+    padding: 1.75rem 1.5rem;
+    border-radius: 28px;
+  }
+
+  .about-ref-bubble p {
+    font-size: 1.35rem;
+  }
+
+  .clients-ref-row {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    justify-items: center;
+    gap: 2rem 1rem;
+  }
+
+  .clients-ref-row .client-logo-item { grid-column: span 2; width: 100%; }
+  .clients-ref-row .client-logo-item:nth-child(4) { grid-column: 2 / span 2; }
+  .clients-ref-row .client-logo-item:nth-child(5) { grid-column: 4 / span 2; }
+
+  .client-logo-item {
+    max-width: 110px;
+    height: 45px;
+  }
+
+  .cta-ref-image {
+    border-radius: 24px;
+  }
+
+  .footer-ref-main {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .footer-ref-brand {
+    grid-column: span 1;
+  }
+
+  .case-gallery-row {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .case-study-meta-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+/* --- Small Mobile Breakpoint (<= 480px) --- */
+@media screen and (max-width: 480px) {
+  .hero-title-bottom {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .service-ref-item {
+    padding: 1.5rem 0;
+  }
+
+  .service-ref-left {
+    gap: 0.85rem;
+  }
+
+  .service-ref-num {
+    font-size: 1.3rem;
+  }
+
+  .service-ref-title {
+    font-size: 1.45rem;
+  }
+}
