@@ -105,11 +105,20 @@
 }
 
 @media screen and (max-width: 768px) {
-  :root { --hero-headline-size: 2.5rem; }
+  :root { --hero-headline-size: clamp(2rem, 9vw, 2.5rem); }
 
-  /* Column layout must center items; baseline alignment shifts the shorter line left. */
+  /* Two centered lines: keep the second line as one unbroken flex row. */
   .hero-ref-content { min-width: 0; max-width: 100%; }
-  .hero-title-bottom { align-items: center; }
+  .hero-title-bottom {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: baseline;
+    justify-content: center;
+    gap: clamp(0.4rem, 2vw, 0.75rem);
+    white-space: nowrap;
+  }
+  .hero-title-top { white-space: nowrap; }
+  .hero-title-in-de, .hero-title-spotlights { flex: 0 0 auto; }
   .hero-title-top, .hero-title-in-de, .hero-title-spotlights { text-align: center; }
 }
 
