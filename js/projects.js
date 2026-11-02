@@ -342,19 +342,27 @@ const PROJECTS = [
     "portfolioImages": [
         {
             "front": "images/projects/mora/project01.png",
-            "back": "images/projects/mora/project02.png"
+            "frontMobile": "images/projects/mora/project01-mobile.jpg",
+            "back": "images/projects/mora/project02.png",
+            "backMobile": "images/projects/mora/project02-mobile.jpg"
         },
         {
             "front": "images/projects/mora/project03.png",
-            "back": "images/projects/mora/project04.png"
+            "frontMobile": "images/projects/mora/project03-mobile.jpg",
+            "back": "images/projects/mora/project04.png",
+            "backMobile": "images/projects/mora/project04-mobile.jpg"
         },
         {
             "front": "images/projects/mora/project05.png",
-            "back": "images/projects/mora/project06.png"
+            "frontMobile": "images/projects/mora/project05-mobile.jpg",
+            "back": "images/projects/mora/project06.png",
+            "backMobile": "images/projects/mora/project06-mobile.jpg"
         },
         {
             "front": "images/projects/mora/project07.png",
-            "back": "images/projects/mora/project08.png"
+            "frontMobile": "images/projects/mora/project07-mobile.jpg",
+            "back": "images/projects/mora/project08.png",
+            "backMobile": "images/projects/mora/project08-mobile.jpg"
         }
     ],
     "description": "Voor Mora mocht ik een creatief campagneconcept bedenken voor 1 april. Vanuit de wens om een jongere doelgroep aan te spreken, ben ik gaan kijken naar de manier waarop jongeren tegenwoordig nieuws, roddels en updates volgen. Social media speelt hierin een grote rol. Vooral juicekanalen zijn populair en weten met opvallende verhalen en 'gelekte' beelden snel de aandacht te trekken.\n\nWat is dan de grap? Cora, het al ruim 40 jaar bekende gezicht van Mora, wordt betrapt bij de concurrent. In een zogenaamd gelekte video is te zien hoe ze stiekem Kwekkeboom-kroketten zit te eten, gewoon in haar vertrouwde Mora-werkkleding. Een juicekanaal deelt de beelden met een opvallend bericht waarin wordt gesuggereerd dat Cora na al die jaren haar snackliefde ergens anders heeft gevonden. Is dit het einde van haar jarenlange loyaliteit aan Mora?\n\nDe keuze voor een juicekanaal als afzender is bewust gemaakt. In plaats van de grap rechtstreeks via de eigen social media kanalen van Mora te verspreiden, wordt het verhaal gebracht alsof het door een onafhankelijk juicekanaal is ontdekt. Hierdoor krijgt het de uitstraling van een echte roddel en ontstaat er nieuwsgierigheid bij de doelgroep.\n\nDoor een herkenbaar merkpersonage in een onverwachte situatie te plaatsen en gebruik te maken van een populaire vorm van social media content, ontstaat een 1-april grap die perfect aansluit bij de huidige online cultuur. Een beetje humor en een flinke dosis lef zorgt ervoor dat Mora op een verrassende manier onder de aandacht komt.",

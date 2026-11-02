@@ -28,10 +28,10 @@ document.addEventListener("DOMContentLoaded", () => {
       const flipper = document.createElement("span");
       flipper.className = "portfolio-showcase__flipper";
 
-      const front = createPanelFace(panel.front, `${projectTitle} beeld ${panelIndex + 1}`, projectIndex === 0, panel.frontPosition);
+      const front = createPanelFace(panel.front, `${projectTitle} beeld ${panelIndex + 1}`, projectIndex === 0, panel.frontPosition, panel.frontMobile);
       front.classList.add("portfolio-showcase__face--front");
 
-      const back = createPanelFace(panel.back, `${projectTitle} alternatief beeld ${panelIndex + 1}`, false, panel.backPosition);
+      const back = createPanelFace(panel.back, `${projectTitle} alternatief beeld ${panelIndex + 1}`, false, panel.backPosition, panel.backMobile);
       back.classList.add("portfolio-showcase__face--back");
 
       flipper.append(front, back);
@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
   mount.replaceChildren(fragment);
 });
 
-function createPanelFace(src, alt, eager, position = "50% 50%") {
+function createPanelFace(src, alt, eager, position = "50% 50%", mobileSrc) {
   const face = document.createElement("span");
   face.className = "portfolio-showcase__face";
 
@@ -71,7 +71,17 @@ function createPanelFace(src, alt, eager, position = "50% 50%") {
   image.decoding = "async";
   image.style.objectPosition = position;
 
-  face.appendChild(image);
+  if (mobileSrc) {
+    const picture = document.createElement("picture");
+    picture.style.display = "contents";
+    const source = document.createElement("source");
+    source.media = "(max-width: 768px)";
+    source.srcset = mobileSrc;
+    picture.append(source, image);
+    face.appendChild(picture);
+  } else {
+    face.appendChild(image);
+  }
   return face;
 }
 
@@ -94,6 +104,8 @@ function normalizePanels(panels) {
   const validPanels = panels
     .map(panel => ({
       front: panel && panel.front,
+      frontMobile: panel && panel.frontMobile,
+      backMobile: panel && (panel.backMobile || panel.frontMobile),
       back: panel && (panel.back || panel.front),
       frontPosition: panel && (panel.frontPosition || panel.position || "50% 50%"),
       backPosition: panel && (panel.backPosition || panel.position || panel.frontPosition || "50% 50%")
@@ -106,6 +118,8 @@ function normalizePanels(panels) {
     const source = validPanels[validPanels.length % validPanels.length] || validPanels[0];
     validPanels.push({
       front: source.front,
+      frontMobile: source.frontMobile,
+      backMobile: source.backMobile || source.frontMobile,
       back: source.back || source.front,
       frontPosition: source.frontPosition || "50% 50%",
       backPosition: source.backPosition || source.frontPosition || "50% 50%"
